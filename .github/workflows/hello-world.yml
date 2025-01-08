@@ -1,9 +1,8 @@
 name: B3-ci
-on: [push]:
-  branch: master
+on: [push]
 jobs:
-name: greeting
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello World"
+  greeting:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - run: echo "Hello World"
