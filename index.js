@@ -17,3 +17,9 @@ const server = http.createServer((req, res) => {
 server.listen(3000, () => {
     console.log('Serveur démarré sur le port 3000');
 });
+
+// Arrêter le serveur après 5 secondes (pour GitHub Actions)
+setTimeout(() => {
+    console.log('Arrêt du serveur après 5 secondes');
+    server.close();
+}, 5000);
