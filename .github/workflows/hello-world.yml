@@ -27,12 +27,22 @@ jobs:
 
       - name: Show environment variables
         env:
-          MESSAGE: ${{ vars.MESSAGE }} # Charge la variable d'environnement
+          MESSAGE: ${{ vars.MESSAGE }}
         run: echo $MESSAGE
 
       - name: Show masked secret API_KEY
         env:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
-          echo "::add-mask::$API_KEY" # Masque la valeur dans les logs
-          echo la clé api est : $API_KEY
+          echo "::add-mask::$API_KEY"
+          echo "La clé API est : $API_KEY"
+
+      - name: Créer le fichier report.txt
+        run: |
+          echo "Rapport d'analyse" > report.txt
+
+      - name: Téléchargement de l'artéfact
+        uses: actions/upload-artifact@v3
+        with:
+          name: rapport-analyse
+          path: report.txt
