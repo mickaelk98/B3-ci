@@ -29,3 +29,10 @@ jobs:
         env:
           MESSAGE: ${{ vars.MESSAGE }} # Charge la variable d'environnement
         run: echo $MESSAGE
+
+     - name: Show masked secret API_KEY
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
+        run: |
+          echo "::add-mask::$API_KEY" # Masque la valeur dans les logs
+          echo "The API_KEY is: $API_KEY (masked)"
