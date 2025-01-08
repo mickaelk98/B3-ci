@@ -42,7 +42,7 @@ jobs:
           echo "Rapport d'analyse" > report.txt
 
       - name: Téléchargement de l'artéfact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rapport-analyse
           path: report.txt
