@@ -21,3 +21,9 @@ jobs:
 
       - name: Run server
         run: npm start
+
+      - name: Show Hello World
+        run: echo "Hello World"
+
+      - name: show environment variables
+        run: echo $Message
