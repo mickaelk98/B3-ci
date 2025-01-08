@@ -26,4 +26,5 @@ jobs:
         run: echo "Hello World"
 
       - name: show environment variables
-        run: echo $MESSAGE
+        env:
+          MESSAGE: ${{ secrets.MESSAGE }}
