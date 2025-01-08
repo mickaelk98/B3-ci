@@ -1,0 +1,9 @@
+name: B3-ci
+on: [push, pull_request]:
+  branch: master
+jobs:
+name: greeting
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello World"
