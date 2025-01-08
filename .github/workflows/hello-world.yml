@@ -35,4 +35,4 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
         run: |
           echo "::add-mask::$API_KEY" # Masque la valeur dans les logs
-          echo "The API_KEY is: $API_KEY (masked)"
+          echo la clé api est : $API_KEY
