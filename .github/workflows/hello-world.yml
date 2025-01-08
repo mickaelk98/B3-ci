@@ -26,5 +26,6 @@ jobs:
         run: echo "Hello World"
 
       - name: show environment variables
-        env:
-          MESSAGE: ${{ secrets.MESSAGE }}
+       env:
+          MESSAGE: ${{ vars.MESSAGE }} # Charge la variable d'environnement
+        run: echo $MESSAGE
