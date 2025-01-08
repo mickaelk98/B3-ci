@@ -3,9 +3,14 @@ const http = require('http');
 
 // Création du serveur
 const server = http.createServer((req, res) => {
+    // Lecture du fichier HTML
+    const fs = require('fs');
+    const html = fs.readFileSync('index.html');
+
     // Envoi d'une réponse au client
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello world!\n');
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end(html);
+
 });
 
 // Démarrage du serveur
