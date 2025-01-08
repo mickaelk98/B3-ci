@@ -2,6 +2,6 @@ name: B3-ci
 on: [push]
 jobs:
   greeting:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - run: echo "Hello World"
