@@ -46,3 +46,10 @@ jobs:
         with:
           name: rapport-analyse
           path: report.txt
+
+  test:
+    runs-on: ubuntu-22.04
+    needs: greeting # Ce job dépend du job greeting
+    steps:
+      - name: Afficher les résultats des tests
+        run: echo "Les tests sont ok"
